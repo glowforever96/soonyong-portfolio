@@ -47,7 +47,7 @@ export const serverChatWrapper = styleVariants({
   SKILLS: [
     baseServerChatWrapper,
     {
-      width: '80%',
+      width: '90%',
     },
   ],
 });

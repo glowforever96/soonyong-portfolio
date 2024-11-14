@@ -77,3 +77,66 @@ export const introParagraph = style({
   maxHeight: '35dvh',
   overflowY: 'auto',
 });
+
+export const scrollX = style({
+  display: 'flex',
+  marginRight: -18,
+});
+
+export const skillBoxWrapper = style({
+  display: 'flex',
+  gap: 4,
+  paddingRight: 12,
+});
+
+export const skillBox = style({
+  display: 'flex',
+  flexDirection: 'column',
+  borderRadius: 8,
+  width: '100%',
+  minWidth: 200,
+  maxWidth: 200,
+  border: '1px solid #d1d9e6',
+  padding: '10px 14px',
+  backgroundColor: '#ffffff',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+});
+
+export const imgContainer = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: '#FFF',
+  width: '100%',
+  height: '155px',
+  marginBottom: '8px',
+  borderBottom: '1px solid #d1d9e6',
+});
+
+export const img = style({
+  objectFit: 'contain',
+  maxWidth: '80%',
+  maxHeight: '80%',
+});
+
+export const descWrapper = style({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-evenly',
+  height: '100%',
+  gap: 4,
+  letterSpacing: '0.5px',
+  lineHeight: 1.6,
+});
+
+export const skillTitle = style({
+  fontSize: '1.2rem',
+  fontWeight: 600,
+  color: '#333',
+});
+
+export const descText = style({
+  fontSize: '0.85rem',
+  color: '#5f6368',
+});
