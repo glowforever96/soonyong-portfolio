@@ -7,7 +7,7 @@ export const wrapper = style({
   flexDirection: 'column',
   flex: 1,
   overflowY: 'auto',
-  gap: 32,
+  gap: 24,
 });
 
 export const serverChatParent = style({
@@ -18,7 +18,7 @@ export const serverChatParent = style({
 
 const baseServerChatWrapper = style({
   padding: 18,
-
+  whiteSpace: 'pre-wrap',
   backgroundColor: '#f4f4f4',
   borderRadius: 8,
   alignSelf: 'flex-start',
@@ -29,7 +29,8 @@ export const serverChatWrapper = styleVariants({
   INIT: [
     baseServerChatWrapper,
     {
-      width: '70%',
+      width: 'fit-content',
+      fontSize: '1rem',
     },
   ],
   EDU_AND_CAREER: [
@@ -48,6 +49,12 @@ export const serverChatWrapper = styleVariants({
     baseServerChatWrapper,
     {
       width: '90%',
+    },
+  ],
+  CONTACT: [
+    baseServerChatWrapper,
+    {
+      width: '70%',
     },
   ],
 });
@@ -94,4 +101,46 @@ export const bubble2 = style({
 
 export const bubble3 = style({
   animationDelay: '0.2s', // 두 번째 버블은 약간 늦게 시작
+});
+
+export const selectChipsWrapper = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 6,
+  alignSelf: 'flex-end',
+  maxWidth: '80%',
+});
+
+export const chipWrapper = style({
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 4,
+  justifyContent: 'flex-end',
+});
+
+export const chipParagraph = style({
+  color: '#666666',
+  fontSize: '0.9rem',
+  lineHeight: 1,
+  textAlign: 'right',
+  marginRight: 12,
+});
+
+export const chipButton = style({
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '8px 16px',
+  borderRadius: 16,
+  border: '1px solid #ccc',
+  backgroundColor: 'transparent',
+  color: '#666666',
+  fontSize: '0.9rem',
+  fontWeight: 500,
+  cursor: 'pointer',
+  width: 'fit-content',
+  ':hover': {
+    backgroundColor: '#4a90e2',
+    color: '#ffffff',
+  },
 });

@@ -2,16 +2,15 @@ import { style } from '@vanilla-extract/css';
 
 export const inputWrapper = style({
   width: '100%',
-  height: '13%',
   padding: 8,
   display: 'flex',
   gap: 12,
-  backgroundColor: 'green',
+  borderTop: '1px solid gray',
 });
 
 export const chatInput = style({
   width: '100%',
-  height: '100%',
+  height: 44,
   borderRadius: 8,
   fontSize: 22,
   resize: 'none',

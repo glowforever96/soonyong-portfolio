@@ -49,8 +49,8 @@ export const mainInfoBox = style({
 export const infoBox = style({
   borderRadius: 8,
   border: '1px solid #d1d9e6',
-  padding: '10px 14px', // 여백 추가
-  backgroundColor: '#ffffff', // 흰색 배경
+  padding: '10px 14px',
+  backgroundColor: '#ffffff',
 });
 
 // init bubble
@@ -139,4 +139,19 @@ export const skillTitle = style({
 export const descText = style({
   fontSize: '0.85rem',
   color: '#5f6368',
+});
+
+export const contactParagraph = style({
+  letterSpacing: '0.5px',
+  lineHeight: 1.6,
+  color: '#333',
+  fontSize: '0.9rem',
+});
+
+export const aTag = style({
+  cursor: 'pointer',
+  ':hover': {
+    color: '#4a90e2',
+    textDecoration: 'underline',
+  },
 });

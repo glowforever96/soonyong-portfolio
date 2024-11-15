@@ -9,7 +9,7 @@ import * as styles from './styles/home/home.css';
 const INIT_CHAT = {
   role: 'server',
   type: 'INIT',
-  message: '안녕하세요. 궁금한 점이 있으신가요?',
+  message: `안녕하세요😀\n\n어떤 점이 궁금하신가요?\n아래 버튼을 클릭해주세요🤗`,
   createdAt: new Date().toLocaleString(),
 };
 
