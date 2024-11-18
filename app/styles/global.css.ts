@@ -41,20 +41,19 @@ globalStyle('button', {
 });
 
 globalStyle('h2', {
-  fontSize: '1.2rem', // 큰 글자 크기
-  color: '#333', // 중간 톤의 검정색
+  fontSize: '1.2rem',
+  color: '#333',
   fontWeight: 600,
   marginBottom: 8,
-  borderBottom: '1px solid #ddd', // 얇은 하단 경계선
+  borderBottom: '1px solid #ddd',
   paddingBottom: 6,
 });
 
-// h3 태그 스타일 (소제목)
 globalStyle('h3', {
-  fontSize: '1.1rem', // 중간 크기 글자
-  color: '#444', // 조금 더 연한 검정색
-  borderBottom: '1px solid #ddd', // 얇은 하단 경계선
+  fontSize: '1.1rem',
+  color: '#444',
+  borderBottom: '1px solid #ddd',
   fontWeight: 500,
-  margin: '12px 0 8px 0', // 여백 조절
+  margin: '12px 0 8px 0',
   paddingBottom: 4,
 });

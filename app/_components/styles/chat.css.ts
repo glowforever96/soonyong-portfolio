@@ -19,7 +19,7 @@ export const h1Title = style({
 export const ulContainer = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: 6,
+  gap: 10,
   whiteSpace: 'pre-wrap',
   wordBreak: 'keep-all',
 });
@@ -153,5 +153,142 @@ export const aTag = style({
   ':hover': {
     color: '#4a90e2',
     textDecoration: 'underline',
+  },
+});
+
+export const worksBoxWrapper = style({
+  display: 'flex',
+  gap: 4,
+  paddingRight: 12,
+});
+
+export const worksBox = style({
+  display: 'flex',
+  flexDirection: 'column',
+  borderRadius: 8,
+  border: '1px solid #d1d9e6',
+  padding: '10px 14px',
+  backgroundColor: '#ffffff',
+  minWidth: '40%',
+});
+
+export const workTitleBox = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+});
+
+export const workTitle = style({
+  letterSpacing: '0.5px',
+  lineHeight: 1.6,
+  fontWeight: 600,
+  color: '#333',
+  fontSize: '1.3rem',
+});
+
+export const date = style({
+  letterSpacing: '0.5px',
+  lineHeight: 1.6,
+  color: '#5f6368',
+  fontSize: '0.8rem',
+});
+
+export const worksTaskTitle = style({
+  width: '100%',
+  borderBottom: '1px solid #ddd',
+  fontWeight: 500,
+  fontSize: '1.1rem',
+  margin: '17px 0 8px 0',
+  color: '#555555',
+  paddingBottom: 8,
+});
+
+export const liTagBig = style([
+  liTagNoStyle,
+  {
+    fontSize: '0.95rem',
+  },
+]);
+
+export const skillsetWrapper = style({
+  display: 'flex',
+  gap: 4,
+  marginTop: 14,
+  padding: 4,
+  flexWrap: 'wrap',
+});
+
+export const skillChip = style({
+  width: 'fit-content',
+  padding: '4px 12px',
+  borderRadius: '12px',
+  fontSize: '0.8rem',
+  fontWeight: 500,
+  color: '#007acc',
+  backgroundColor: '#e6f7ff',
+  border: '1px solid #007acc',
+  display: 'inline-block',
+  whiteSpace: 'nowrap',
+});
+
+export const projectsBoxWrapper = style({
+  display: 'flex',
+  gap: 4,
+  paddingRight: 12,
+});
+
+export const projectBox = style({
+  display: 'flex',
+  flexDirection: 'column',
+  borderRadius: 8,
+  border: '1px solid #d1d9e6',
+  padding: '10px 14px',
+  backgroundColor: '#ffffff',
+  width: 'var(--project-box-width)',
+});
+
+export const projectImgContainer = style({
+  width: '100%',
+  height: 350,
+  position: 'relative',
+});
+
+export const projectImg = style({
+  width: '100%',
+  height: '90%',
+  objectFit: 'contain',
+});
+
+export const projectTitleDate = style({
+  display: 'flex',
+  flexDirection: 'column',
+  marginBottom: 8,
+});
+
+export const projectTitle = style({
+  letterSpacing: '0.5px',
+  lineHeight: 1.6,
+  fontWeight: 600,
+  color: '#333',
+  fontSize: '1.2rem',
+});
+
+export const showBigBtn = style({
+  width: 'fit-content',
+  height: 'auto',
+  padding: '6px 12px',
+  position: 'absolute',
+  bottom: 0,
+  right: 0,
+  cursor: 'pointer',
+  border: '1px solid #005f99',
+  borderRadius: '8px',
+  background: 'rgba(255, 255, 255, 0.9)',
+  fontSize: '0.85rem',
+  color: '#005f99',
+  fontWeight: 600,
+  ':hover': {
+    color: '#ffffff',
+    background: '#005f99',
   },
 });

@@ -8,6 +8,7 @@ export const wrapper = style({
   flex: 1,
   overflowY: 'auto',
   gap: 24,
+  padding: 24,
 });
 
 export const serverChatParent = style({
@@ -17,12 +18,22 @@ export const serverChatParent = style({
 });
 
 const baseServerChatWrapper = style({
+  position: 'relative',
   padding: 18,
   whiteSpace: 'pre-wrap',
   backgroundColor: '#f4f4f4',
   borderRadius: 8,
   alignSelf: 'flex-start',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // 부드러운 그림자
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  '::after': {
+    content: '""',
+    position: 'absolute',
+    top: 0,
+    left: -44,
+    borderWidth: '28px',
+    borderStyle: 'solid',
+    borderColor: 'transparent #f4f4f4 transparent transparent',
+  },
 });
 
 export const serverChatWrapper = styleVariants({
@@ -57,6 +68,18 @@ export const serverChatWrapper = styleVariants({
       width: '70%',
     },
   ],
+  WORKS: [
+    baseServerChatWrapper,
+    {
+      width: '95%',
+    },
+  ],
+  PROJECTS: [
+    baseServerChatWrapper,
+    {
+      width: '100%',
+    },
+  ],
 });
 
 export const clientChatWrapper = style([
@@ -67,6 +90,16 @@ export const clientChatWrapper = style([
     color: '#fff',
     fontSize: '1rem',
     padding: 14,
+    position: 'relative',
+    '::after': {
+      content: '""',
+      top: 0,
+      left: 'unset',
+      right: -32,
+      borderWidth: '22px',
+      borderStyle: 'solid',
+      borderColor: 'transparent transparent transparent #4a90e2',
+    },
   },
 ]);
 
