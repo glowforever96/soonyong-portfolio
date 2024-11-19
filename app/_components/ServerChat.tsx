@@ -2,14 +2,23 @@ import EduCareerBubble from './EduCareerBubble';
 import InitBubble from './InitBubble';
 import IntroduceBubble from './IntroduceBubble';
 import * as styles from './styles/contentsSection.css';
-import LogoIcon from '../../public/chatbot.svg';
-import Loading from './Loading';
 import SkillBubble from './SkillBubble';
 import ContactBubble from './ContactBubble';
 import WorksBubble from './WorksBubble';
 import ProjectsBubble from './ProjectsBubble';
+import { ServerChatType } from '../_types/chat';
 
-export default function ServerChat({ type, message }) {
+interface ServerChatProps {
+  type: ServerChatType;
+  message?: string;
+  timestamp: string;
+}
+
+export default function ServerChat({
+  type,
+  message,
+  timestamp,
+}: ServerChatProps) {
   const renderByType = () => {
     switch (type) {
       case 'INIT':
@@ -33,11 +42,11 @@ export default function ServerChat({ type, message }) {
 
   return (
     <div className={styles.serverChatParent}>
-      <LogoIcon />
       <div className={styles.serverChatWrapper[type]}>
         {message && message}
         {renderByType()}
       </div>
+      <span className={styles.timestamp}>{timestamp}</span>
     </div>
   );
 }

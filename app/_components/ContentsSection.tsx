@@ -4,8 +4,19 @@ import ServerChat from './ServerChat';
 import * as styles from './styles/contentsSection.css';
 import Loading from './Loading';
 import SelectChips from './SelectChips';
+import { ChatType, ServerChatType } from '../_types/chat';
 
-export default function ContentsSection({ chats, getAnswer, isLoading }) {
+interface ContentsSectionProps {
+  chats: ChatType[];
+  isLoading: boolean;
+  getAnswer: (e: React.MouseEvent<HTMLButtonElement>, message: string) => void;
+}
+
+export default function ContentsSection({
+  chats,
+  getAnswer,
+  isLoading,
+}: ContentsSectionProps) {
   const bottomRef = useRef<HTMLDivElement>(null);
   const isShowSelectChips = chats[chats.length - 1].role === 'server';
 
@@ -18,11 +29,20 @@ export default function ContentsSection({ chats, getAnswer, isLoading }) {
 
   return (
     <div className={styles.wrapper}>
-      {chats.map(({ role, type, message }) =>
+      {chats.map(({ role, type, message, timestamp }) =>
         role === 'server' ? (
-          <ServerChat key={`${role}${type}`} type={type} message={message} />
+          <ServerChat
+            key={`${role}${type}`}
+            type={type as ServerChatType}
+            message={message}
+            timestamp={timestamp}
+          />
         ) : (
-          <ClientChat key={`${role}${type}`} message={message} />
+          <ClientChat
+            key={`${role}${type}`}
+            message={message!}
+            timestamp={timestamp}
+          />
         ),
       )}
       {isLoading && <Loading />}
