@@ -36,7 +36,7 @@ export default function ImgSwiper({ modalData, onClose }: ImgSwiperProps) {
         >
           {imgList?.map((src, idx) => (
             <SwiperSlide key={idx}>
-              <Image src={src} alt="image" loading="lazy" layout="fill" />
+              <Image src={src} alt="image" loading="lazy" />
             </SwiperSlide>
           ))}
         </Swiper>

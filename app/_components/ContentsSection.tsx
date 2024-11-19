@@ -29,17 +29,17 @@ export default function ContentsSection({
 
   return (
     <div className={styles.wrapper}>
-      {chats.map(({ role, type, message, timestamp }) =>
+      {chats.map(({ role, type, message, timestamp }, idx) =>
         role === 'server' ? (
           <ServerChat
-            key={`${role}${type}`}
+            key={`${role}${type}${idx}`}
             type={type as ServerChatType}
             message={message}
             timestamp={timestamp}
           />
         ) : (
           <ClientChat
-            key={`${role}${type}`}
+            key={`${role}${idx}`}
             message={message!}
             timestamp={timestamp}
           />
