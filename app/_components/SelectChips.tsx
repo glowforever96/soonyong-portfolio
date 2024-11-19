@@ -1,6 +1,11 @@
 import * as styles from './styles/contentsSection.css';
 
-export default function SelectChips({ getAnswer, isInit }) {
+interface SelectChipsProps {
+  isInit: boolean;
+  getAnswer: (e: React.MouseEvent<HTMLButtonElement>, message: string) => void;
+}
+
+export default function SelectChips({ getAnswer, isInit }: SelectChipsProps) {
   return (
     <div className={styles.selectChipsWrapper}>
       {!isInit && (
