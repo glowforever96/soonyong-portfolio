@@ -2,18 +2,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  max-width: 700;
+  width: 100vw;
   height: 100dvh;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .modalContent {
-  padding: 8px;
   width: 100%;
   max-width: 700px;
   height: 100%;
@@ -22,24 +21,34 @@
 
 .btnWrapper {
   width: 100%;
-  height: 44px;
+  height: 54px;
   display: flex;
   justify-content: flex-end;
+  padding: 0 14px;
+  margin-top: 14px;
 }
 
 .closeBtn {
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   border: none;
   cursor: pointer;
   background-color: transparent;
   color: #fff;
   font-size: 24px;
 }
+.closeBtn > svg {
+  width: inherit;
+  height: inherit;
+  path {
+    stroke: #fff;
+  }
+}
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 35%;
+  margin-top: 24px;
 }
 
 .swiper-slide {
@@ -82,4 +91,42 @@
 
 .swiper-button-prev::after {
   font-size: 18px;
+}
+
+.descWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  background-color: #fff;
+  padding: 18px;
+}
+
+.title {
+  padding-bottom: 7px;
+  border-bottom: 2px solid #007acc;
+  color: #005f99;
+  font-size: 1.35rem;
+  color: #005f99;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.ulWrapper {
+  width: 100%;
+  height: auto;
+  word-break: break-all;
+  overflow-y: auto;
+}
+
+.linkBox {
+  width: fit-content;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 8px;
+  border: 1px solid #d1d9e6;
+  padding: 10px 14px;
 }

@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { keyframes, style } from '@vanilla-extract/css';
 
 export const title = style({
   width: '100%',
@@ -263,6 +263,8 @@ export const projectTitleDate = style({
   display: 'flex',
   flexDirection: 'column',
   marginBottom: 8,
+  paddingBottom: 8,
+  borderBottom: '1px solid #d1d9e6',
 });
 
 export const projectTitle = style({
@@ -291,4 +293,23 @@ export const showBigBtn = style({
     color: '#ffffff',
     background: '#005f99',
   },
+});
+
+const motion = keyframes({
+  '0%': {
+    marginTop: '0px',
+  },
+  '100%': {
+    marginTop: '10px',
+  },
+});
+
+export const customSvg = style({
+  width: 30,
+  height: 30,
+  position: 'absolute',
+  top: -20,
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  animation: `${motion} 0.5s linear 0s infinite alternate`,
 });

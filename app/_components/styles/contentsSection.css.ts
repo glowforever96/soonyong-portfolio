@@ -13,8 +13,8 @@ export const wrapper = style({
 
 export const serverChatParent = style({
   display: 'flex',
-  flexDirection: 'column',
-  gap: 12,
+  alignItems: 'flex-end',
+  gap: 5,
 });
 
 const baseServerChatWrapper = style({
@@ -80,6 +80,13 @@ export const serverChatWrapper = styleVariants({
       width: '100%',
     },
   ],
+});
+
+export const clientChatParent = style({
+  display: 'flex',
+  gap: 5,
+  alignSelf: 'flex-end',
+  alignItems: 'flex-end',
 });
 
 export const clientChatWrapper = style([
@@ -176,4 +183,12 @@ export const chipButton = style({
     backgroundColor: '#4a90e2',
     color: '#ffffff',
   },
+});
+
+export const timestamp = style({
+  fontSize: '0.75rem',
+  color: '#999999',
+  whiteSpace: 'nowrap',
+  textAlign: 'end',
+  height: 'fit-content',
 });
