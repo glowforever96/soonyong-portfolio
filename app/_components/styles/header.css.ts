@@ -9,5 +9,5 @@ export const header = style({
   padding: '0 16px',
   color: '#fff',
   fontSize: '1.2rem',
-  fontWeight: 700,
+  fontWeight: 600,
 });

@@ -10,7 +10,7 @@ globalStyle('body, html', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: 'lightgray',
+  backgroundColor: '#fafafa',
   margin: 0,
   padding: 0,
   boxSizing: 'border-box',
