@@ -1,4 +1,5 @@
 import * as styles from './styles/inputSection.css';
+import SendIcon from '../../public/send.svg';
 
 interface InputSectionProps {
   query: string;
@@ -12,10 +13,9 @@ export default function InputSection({ query, onChange }: InputSectionProps) {
         className={styles.chatInput}
         value={query}
         onChange={(e) => onChange(e)}
-        disabled
       />
-      <button disabled className={styles.sendButton}>
-        전송
+      <button className={styles.sendButton}>
+        <SendIcon />
       </button>
     </div>
   );

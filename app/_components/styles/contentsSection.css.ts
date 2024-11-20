@@ -67,7 +67,7 @@ export const serverChatWrapper = styleVariants({
   CONTACT: [
     baseServerChatWrapper,
     {
-      width: '70%',
+      width: '80%',
     },
   ],
   WORKS: [

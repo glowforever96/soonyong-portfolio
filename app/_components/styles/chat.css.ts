@@ -146,6 +146,7 @@ export const contactParagraph = style({
   lineHeight: 1.6,
   color: '#333',
   fontSize: '0.9rem',
+  display: 'flex',
 });
 
 export const aTag = style({
