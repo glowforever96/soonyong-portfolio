@@ -1,4 +1,10 @@
 import * as styles from './styles/chat.css';
+import Project1Img_1 from '../../public/images/project/chatbot/1.png';
+import Project1Img_2 from '../../public/images/project/chatbot/2.png';
+import Project1Img_3 from '../../public/images/project/chatbot/3.png';
+import Project1Img_4 from '../../public/images/project/chatbot/4.png';
+import Project1Img_5 from '../../public/images/project/chatbot/5.png';
+
 import Project2Img_1 from '../../public/images/project/nextjsplayground/1.png';
 import Project2Img_2 from '../../public/images/project/nextjsplayground/2.png';
 import Project2Img_3 from '../../public/images/project/nextjsplayground/3.png';
@@ -145,24 +151,30 @@ export default function ProjectBubble() {
 
 const PROJECT_DATA = [
   {
-    title: 'portfolio-chatbot',
-    link: '',
-    github: '',
+    title: 'Portfolio Site',
+    link: 'https://soonyong-portfolio.vercel.app/',
+    github: 'https://github.com/boyfromthewell/soonyong-portfolio',
     date: '2024.11',
     img: [
-      Project2Img_1,
-      Project2Img_2,
-      Project2Img_3,
-      Project2Img_4,
-      Project2Img_5,
+      Project1Img_1,
+      Project1Img_2,
+      Project1Img_3,
+      Project1Img_4,
+      Project1Img_5,
     ],
-    about: ['- 1', '- 2', '- 3'],
+    about: [
+      '- 저의 포트폴리오용 웹사이트 입니다.',
+      '- 정적인 포트폴리오 사이트 대신 조금 더 흥미로운 형식이 없을까 고민했고 챗봇 형식으로 제작 해보게 되었습니다.',
+      '- 챗봇 인터페이스를 통해 방문하시는 분들이 자연스럽게 저의 경력, 프로젝트, 기술 스택 등을 보실 수 있도록 설계했습니다.',
+      '- Next.js, Vanilla Extract 등 최신 기술 스택을 활용하여 사용자 경험과 성능을 최적화했습니다.',
+      '- 다양한 화면에서도 최적화된 UI를 제공하기 위해 반응형 디자인에 신경 썼습니다.',
+      '- 특히 Vanilla Extract를 사용해보면서 TypeScript 기반이기 때문에 타입 안정성과 자동 완성 기능을 제공함으로 개발 생산성이 높아짐을 느꼈습니다.',
+    ],
     skillset: [
       'React',
       'Next.js',
       'TypeScript',
       'vanilla-extract',
-      ,
       'swiper',
       'prisma',
     ],
