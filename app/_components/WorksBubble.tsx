@@ -8,7 +8,7 @@ export default function WorksBubble() {
       <div className={styles.title}>
         <h1 className={styles.h1Title}>Works</h1>
       </div>
-      <h3>티맥스에이아이 (2022. 10 ~ 2024. 11)</h3>
+      <h3>티맥스에이아이 (2022. 10 ~ 2024. 10)</h3>
       <ScrollXslider>
         <div className={styles.worksBoxWrapper}>
           {WORK_DATA.map(({ title, link, date, tasks, skillsets }) => (

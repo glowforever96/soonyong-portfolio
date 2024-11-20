@@ -7,19 +7,21 @@ export const wrapper = style({
   flexDirection: 'column',
   flex: 1,
   overflowY: 'auto',
+  overflowX: 'hidden',
   gap: 24,
   padding: 24,
 });
 
 export const serverChatParent = style({
   display: 'flex',
-  alignItems: 'flex-end',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
   gap: 5,
 });
 
 const baseServerChatWrapper = style({
   position: 'relative',
-  padding: 18,
+  padding: 14,
   whiteSpace: 'pre-wrap',
   backgroundColor: '#f4f4f4',
   borderRadius: 8,
@@ -41,7 +43,7 @@ export const serverChatWrapper = styleVariants({
     baseServerChatWrapper,
     {
       width: 'fit-content',
-      fontSize: '1rem',
+      fontSize: '0.9rem',
     },
   ],
   EDU_AND_CAREER: [
@@ -175,7 +177,7 @@ export const chipButton = style({
   border: '1px solid #ccc',
   backgroundColor: 'transparent',
   color: '#666666',
-  fontSize: '0.9rem',
+  fontSize: '0.8rem',
   fontWeight: 500,
   cursor: 'pointer',
   width: 'fit-content',
@@ -191,4 +193,5 @@ export const timestamp = style({
   whiteSpace: 'nowrap',
   textAlign: 'end',
   height: 'fit-content',
+  width: 'inherit',
 });
