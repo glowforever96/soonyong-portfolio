@@ -24,18 +24,9 @@ const baseServerChatWrapper = style({
   padding: 14,
   whiteSpace: 'pre-wrap',
   backgroundColor: '#f4f4f4',
-  borderRadius: 8,
+  borderRadius: '0 32px 32px 32px',
   alignSelf: 'flex-start',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  '::after': {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    left: -44,
-    borderWidth: '28px',
-    borderStyle: 'solid',
-    borderColor: 'transparent #f4f4f4 transparent transparent',
-  },
 });
 
 export const serverChatWrapper = styleVariants({
@@ -94,21 +85,13 @@ export const clientChatParent = style({
 export const clientChatWrapper = style([
   baseServerChatWrapper,
   {
+    borderRadius: '32px 0px 32px 32px',
     alignSelf: 'flex-end',
     backgroundColor: '#4a90e2',
     color: '#fff',
     fontSize: '1rem',
     padding: 14,
     position: 'relative',
-    '::after': {
-      content: '""',
-      top: 0,
-      left: 'unset',
-      right: -32,
-      borderWidth: '22px',
-      borderStyle: 'solid',
-      borderColor: 'transparent transparent transparent #4a90e2',
-    },
   },
 ]);
 
