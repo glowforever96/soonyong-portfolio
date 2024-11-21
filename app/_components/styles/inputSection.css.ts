@@ -40,13 +40,13 @@ export const sendButton = style({
   justifyContent: 'center',
   border: 'none',
   borderRadius: 8,
-  backgroundColor: '#4a90e2',
+  backgroundColor: '#4285F4',
   color: '#ffffff',
   fontSize: '1.25rem',
   fontWeight: 600,
   cursor: 'pointer',
   transition: 'background-color 0.3s ease',
   ':hover': {
-    backgroundColor: '#3b78c4',
+    backgroundColor: '#5A9FEA',
   },
 });
