@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ContentsSection from './_components/ContentsSection';
 import Header from './_components/Header';
 import InputSection from './_components/InputSection';
 import * as styles from './styles/home/home.css';
 import { extractTime } from './lib/time';
 import { ChatType, ServerChatType } from './_types/chat';
+import { registerUser } from './lib/api/registerUser';
 
 const INIT_CHAT: ChatType = {
   role: 'server',
@@ -52,6 +53,18 @@ export default function Home() {
       setIsLoading(false);
     }, 800);
   };
+
+  const registerUserNeeded = async () => {
+    const userId = localStorage.getItem('userId');
+    if (!userId) {
+      const { userId } = await registerUser();
+      localStorage.setItem('userId', userId);
+    }
+  };
+
+  useEffect(() => {
+    registerUserNeeded();
+  }, []);
 
   return (
     <div className={styles.appWrapper}>

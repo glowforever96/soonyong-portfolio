@@ -4,6 +4,7 @@ import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
 const withVanillaExtract = createVanillaExtractPlugin();
 const nextConfig: NextConfig = {
   /* config options here */
+  reactStrictMode: false,
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '*' }],
     unoptimized: true,
