@@ -54,7 +54,7 @@ const WORK_DATA = [
       '- AI 룰 베이스 기반 챗봇 및 지식 제공 서비스 개발 진행',
       '- 질의 응답, 지식 제공 및 다수 기능 구현',
       '- Docker 컨테이너화로 Frontend 테스트 환경 구축 및 유지 보수',
-      '- optimistic update 기법으로 챗 응답에 기반 좋아요/싫어요 UX 사용자 경험 최적화',
+      '- optimistic update 기법으로 챗 응답 피드백 기능(좋아요/싫어요) UX 사용자 경험 최적화',
     ],
     skillsets: [
       'React',
