@@ -18,12 +18,6 @@ export default function ContactBubble() {
               tnsdyd10@naver.com
             </a>
           </p>
-          <p className={styles.contactParagraph}>
-            Phone:{' '}
-            <a href="tel:01043307466" className={styles.aTag}>
-              010-4330-7466
-            </a>
-          </p>
         </div>
         <div>
           <h3>Channels</h3>
