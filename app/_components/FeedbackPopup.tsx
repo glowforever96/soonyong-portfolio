@@ -1,25 +1,28 @@
 import { useState } from 'react';
 import * as styles from './styles/feedback.css';
-import Toast from './Toast';
 import { useToastStore } from '../store/toast';
 import { postFeedback } from '../lib/api/postFeedback';
+import { ClipLoader } from 'react-spinners';
 
 export default function FeedbackPopup({ onClose }: { onClose: () => void }) {
   const [textValue, setTextValue] = useState('');
   const { showToast } = useToastStore();
   const userId = localStorage.getItem('userId') || '';
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextValue(e.target.value);
   };
 
   const sendFeedback = async () => {
+    setIsLoading(true);
     const isSucess = await postFeedback({
       userId,
       text: textValue,
       createdAt: new Date().toLocaleString(),
     });
     if (isSucess) {
+      setIsLoading(false);
       showToast('소중한 의견 감사합니다😝');
       onClose();
     }
@@ -50,9 +53,17 @@ export default function FeedbackPopup({ onClose }: { onClose: () => void }) {
           <button
             onClick={sendFeedback}
             className={styles.confirmBtn}
-            disabled={textValue.length < 1}
+            disabled={textValue.length < 1 || isLoading}
           >
-            확인
+            {isLoading ? (
+              <ClipLoader
+                size={25}
+                color="#4285F4"
+                aria-label="loading spinner"
+              />
+            ) : (
+              '확인'
+            )}
           </button>
         </div>
       </div>

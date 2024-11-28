@@ -84,6 +84,7 @@ const baseBtn = style({
   borderRadius: 8,
   padding: '10px 14px',
   fontSize: '1.2rem',
+  maxHeight: 48,
 });
 
 export const cancleBtn = style([
