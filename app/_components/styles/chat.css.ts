@@ -170,7 +170,7 @@ export const worksBox = style({
   border: '1px solid #d1d9e6',
   padding: '10px 14px',
   backgroundColor: '#ffffff',
-  minWidth: '40%',
+  minWidth: '35%',
 });
 
 export const workTitleBox = style({
@@ -202,6 +202,19 @@ export const worksTaskTitle = style({
   margin: '17px 0 8px 0',
   color: '#555555',
   paddingBottom: 8,
+});
+
+export const workDesc = style({
+  letterSpacing: '0.5px',
+  lineHeight: 1.6,
+  backgroundColor: 'rgb(241, 241, 239)',
+  color: '#37352f',
+  padding: '10px 14px',
+  wordBreak: 'keep-all',
+  marginTop: 20,
+  borderRadius: 5,
+  fontWeight: 500,
+  fontSize: '0.9rem',
 });
 
 export const liTagBig = style([
