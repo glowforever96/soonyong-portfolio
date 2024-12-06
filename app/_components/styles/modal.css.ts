@@ -33,16 +33,19 @@ export const worksFillScreenWrapper = style({
 });
 
 export const closeBtn = style({
+  position: 'fixed',
+  bottom: 17,
+  right: 17,
   display: 'flex',
   alignItems: 'center',
-  width: 44,
-  height: 44,
+  width: 40,
+  height: 40,
   justifyContent: 'center',
-  justifySelf: 'flex-end',
-  backgroundColor: '#f4f7fa',
+  backgroundColor: 'rgba(244, 247, 250, 0.7)',
   color: '#333',
-  border: '1px solid #ddd',
+  border: '1px solid rgba(221, 221, 221, 0.7)',
   cursor: 'pointer',
-  borderRadius: 6,
-  marginBottom: 12,
+  borderRadius: '50%',
+  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  backdropFilter: 'blur(5px)',
 });

@@ -7,12 +7,14 @@ import WorksContent from './WorksContent';
 
 export default function WorksBubble() {
   const [showBigView, setShowBigView] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBigView(true);
     }, 800);
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <>
       <div className={styles.commonBubble}>
@@ -25,8 +27,8 @@ export default function WorksBubble() {
         </ScrollXslider>
       </div>
       {showBigView && (
-        <Modal>
-          <WorksFillScreen onClose={() => setShowBigView(false)} />
+        <Modal onClose={() => setShowBigView(false)}>
+          <WorksFillScreen />
         </Modal>
       )}
     </>

@@ -1,14 +1,9 @@
-import * as modalStyles from './styles/modal.css';
 import * as styles from './styles/chat.css';
-import CloseIcon from '../../public/close.svg';
 import WorksContent from './WorksContent';
 
-export default function WorksFillScreen({ onClose }: { onClose: () => void }) {
+export default function WorksFillScreen() {
   return (
     <div>
-      <button onClick={onClose} className={modalStyles.closeBtn}>
-        <CloseIcon />
-      </button>
       <div className={styles.title}>
         <h1 className={styles.h1Title}>Works</h1>
       </div>
