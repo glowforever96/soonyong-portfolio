@@ -1,4 +1,4 @@
-import { keyframes, style } from '@vanilla-extract/css';
+import { keyframes, style, styleVariants } from '@vanilla-extract/css';
 
 export const title = style({
   width: '100%',
@@ -157,10 +157,25 @@ export const aTag = style({
   },
 });
 
-export const worksBoxWrapper = style({
+export const worksBoxBase = style({
   display: 'flex',
-  gap: 4,
-  paddingRight: 12,
+});
+
+export const workBoxWrapper = styleVariants({
+  BUBBLE: [
+    worksBoxBase,
+    {
+      gap: 4,
+      paddingRight: 12,
+    },
+  ],
+  FILL: [
+    worksBoxBase,
+    {
+      gap: 18,
+      flexDirection: 'column',
+    },
+  ],
 });
 
 export const worksBox = style({
