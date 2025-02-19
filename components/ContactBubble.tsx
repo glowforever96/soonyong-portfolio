@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import * as styles from './styles/chat.css';
-import GitLogo from '../../public/github.svg';
-import Velog from '../../public/images/velog.png';
+import GitLogo from '../public/github.svg';
+import Velog from '../public/images/velog.png';
 import Image from 'next/image';
 
 export default function ContactBubble() {
@@ -11,6 +11,14 @@ export default function ContactBubble() {
         <h1 className={styles.h1Title}>Contact</h1>
       </div>
       <div className={styles.infoBox}>
+        <Image
+          src={'/images/me.webp'}
+          alt="logo"
+          width={200}
+          height={200}
+          style={{ borderRadius: '50%', marginBottom: 8 }}
+          priority
+        />
         <div>
           <p className={styles.contactParagraph}>
             Email:{' '}

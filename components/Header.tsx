@@ -1,5 +1,7 @@
+'use client';
+
 import { useState } from 'react';
-import FeedbackIcon from '../../public/feedback.svg';
+import FeedbackIcon from '../public/feedback.svg';
 import * as styles from './styles/header.css';
 import FeedbackPopup from './FeedbackPopup';
 import { useToastStore } from '../store/toast';

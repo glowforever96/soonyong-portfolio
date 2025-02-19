@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Modal from './Modal';
 import WorksFillScreen from './WorksFillScreen';
 import WorksContent from './WorksContent';
+import FullScreenButton from './FullScreenButton';
 
 export default function WorksBubble() {
   const [showBigView, setShowBigView] = useState(false);
@@ -25,9 +26,10 @@ export default function WorksBubble() {
         <ScrollXslider>
           <WorksContent type="BUBBLE" />
         </ScrollXslider>
+        <FullScreenButton onClick={() => setShowBigView(true)} />
       </div>
       {showBigView && (
-        <Modal onClose={() => setShowBigView(false)}>
+        <Modal onClose={() => setShowBigView(false)} type="GEN">
           <WorksFillScreen />
         </Modal>
       )}

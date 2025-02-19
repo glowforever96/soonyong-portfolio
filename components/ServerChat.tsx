@@ -6,7 +6,7 @@ import SkillBubble from './SkillBubble';
 import ContactBubble from './ContactBubble';
 import WorksBubble from './WorksBubble';
 import ProjectsBubble from './ProjectsBubble';
-import { ServerChatType } from '../_types/chat';
+import { ServerChatType } from '../types/chat';
 
 interface ServerChatProps {
   type: ServerChatType;

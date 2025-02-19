@@ -178,3 +178,40 @@ export const timestamp = style({
   height: 'fit-content',
   width: 'inherit',
 });
+
+export const imgFullContainer = style({
+  width: '100vw',
+  height: '100dvh',
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  backgroundColor: '#fff',
+  zIndex: 9999,
+  display: 'flex',
+  flexDirection: 'column',
+});
+
+export const closeBtn = style({
+  width: 65,
+  height: 65,
+  borderRadius: 12,
+  backgroundColor: 'transparent',
+  cursor: 'pointer',
+  border: '2px solid black',
+  background: 'rgba(255, 255, 255, 0.9)',
+  marginLeft: 'auto',
+  marginTop: 4,
+  marginRight: 24,
+  marginBottom: 12,
+});
+
+export const svgIcon = style({
+  width: 'inherit',
+  height: 'inherit',
+});
+
+export const fullImg = style({
+  width: '100%',
+  height: '100%',
+  objectFit: 'contain',
+});

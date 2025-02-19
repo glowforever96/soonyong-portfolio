@@ -1,15 +1,15 @@
 import ScrollXslider from './ScrollXslider';
 import * as styles from './styles/chat.css';
-import ReactImg from '../../public/images/react.png';
-import JsImg from '../../public/images/js.png';
-import TsImg from '../../public/images/ts.png';
-import ScImg from '../../public/images/stylecom.png';
-import VeImg from '../../public/images/vanila.png';
-import GlobalStateImg from '../../public/images/globalState.png';
-import NextImg from '../../public/images/next.png';
-import QuerySwr from '../../public/images/query.png';
-import DockerImg from '../../public/images/docker.png';
-import GitImg from '../../public/images/git.png';
+import ReactImg from '../public/images/react.png';
+import JsImg from '../public/images/js.png';
+import TsImg from '../public/images/ts.png';
+import ScImg from '../public/images/stylecom.png';
+import VeImg from '../public/images/vanila.png';
+import GlobalStateImg from '../public/images/globalState.png';
+import NextImg from '../public/images/next.png';
+import QuerySwr from '../public/images/query.png';
+import DockerImg from '../public/images/docker.png';
+import GitImg from '../public/images/git.png';
 import Image from 'next/image';
 
 export default function SkillBubble() {

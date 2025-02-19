@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image';
 import { ModalDataType } from './ProjectsBubble';
-import CloseIcon from '../../public/close.svg';
-import GitLogo from '../../public/github.svg';
+import CloseIcon from '../public/close.svg';
+import GitLogo from '../public/github.svg';
 
 import './styles/swiper.css';
 import Link from 'next/link';

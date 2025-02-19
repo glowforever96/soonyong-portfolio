@@ -13,7 +13,7 @@ export const h1Title = style({
   fontSize: '1.35rem',
   color: '#005f99',
   fontWeight: 700,
-  letterSpacing: '0.5px', // 폰트 간격 추가
+  letterSpacing: '0.5px',
 });
 
 export const ulContainer = style({
@@ -150,12 +150,21 @@ export const contactParagraph = style({
 });
 
 export const aTag = style({
+  letterSpacing: '0.5px',
+  lineHeight: 1.6,
   cursor: 'pointer',
   ':hover': {
     color: '#4a90e2',
     textDecoration: 'underline',
   },
 });
+
+export const aTagBig = style([
+  aTag,
+  {
+    fontSize: '1.1rem',
+  },
+]);
 
 export const worksBoxBase = style({
   display: 'flex',
@@ -209,6 +218,13 @@ export const date = style({
   fontSize: '0.8rem',
 });
 
+export const dateBig = style([
+  date,
+  {
+    fontSize: '1.1rem',
+  },
+]);
+
 export const worksTaskTitle = style({
   width: '100%',
   borderBottom: '1px solid #ddd',
@@ -239,6 +255,13 @@ export const liTagBig = style([
   },
 ]);
 
+export const liTagMoreBig = style([
+  liTagNoStyle,
+  {
+    fontSize: '1.1rem',
+  },
+]);
+
 export const skillsetWrapper = style({
   display: 'flex',
   gap: 4,
@@ -246,6 +269,14 @@ export const skillsetWrapper = style({
   padding: 4,
   flexWrap: 'wrap',
 });
+
+export const skillsetWrapperBig = style([
+  skillsetWrapper,
+  {
+    gap: 12,
+    marginBottom: 18,
+  },
+]);
 
 export const skillChip = style({
   width: 'fit-content',
@@ -260,6 +291,14 @@ export const skillChip = style({
   whiteSpace: 'nowrap',
 });
 
+export const skillChipBig = style([
+  skillChip,
+  {
+    fontSize: '1.0rem',
+    borderRadius: 16,
+  },
+]);
+
 export const projectsBoxWrapper = style({
   display: 'flex',
   gap: 4,
@@ -267,6 +306,7 @@ export const projectsBoxWrapper = style({
 });
 
 export const projectBox = style({
+  position: 'relative',
   display: 'flex',
   flexDirection: 'column',
   borderRadius: 8,
@@ -296,6 +336,15 @@ export const projectTitleDate = style({
   borderBottom: '1px solid #d1d9e6',
 });
 
+export const projectTitleDateBig = style([
+  projectTitleDate,
+  {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+]);
+
 export const projectTitle = style({
   letterSpacing: '0.5px',
   lineHeight: 1.6,
@@ -304,15 +353,21 @@ export const projectTitle = style({
   fontSize: '1.2rem',
 });
 
+export const projectTitleBig = style([
+  projectTitle,
+  {
+    fontSize: '1.775rem',
+  },
+]);
+
 export const showBigBtn = style({
   width: 'fit-content',
-  height: 'auto',
+  height: 44,
   padding: '6px 12px',
   position: 'absolute',
-  bottom: 0,
-  right: 0,
+  right: 18,
   cursor: 'pointer',
-  border: '1px solid #005f99',
+  border: '1px solid #4a90e2',
   borderRadius: '8px',
   background: 'rgba(255, 255, 255, 0.9)',
   fontSize: '0.85rem',
@@ -320,7 +375,7 @@ export const showBigBtn = style({
   fontWeight: 600,
   ':hover': {
     color: '#ffffff',
-    background: '#005f99',
+    background: '#4a90e2',
   },
 });
 
@@ -341,4 +396,57 @@ export const customSvg = style({
   left: '50%',
   transform: 'translate(-50%, -50%)',
   animation: `${motion} 0.5s linear 0s infinite alternate`,
+});
+
+export const fullScreenBtn = style({
+  width: '20%',
+  height: 44,
+  borderRadius: 8,
+  marginLeft: 'auto',
+  marginTop: 12,
+  padding: '6px 12px',
+  cursor: 'pointer',
+  border: '1px solid #4a90e2',
+  background: 'rgba(255, 255, 255, 0.9)',
+  fontSize: '0.85rem',
+  color: '#005f99',
+  fontWeight: 600,
+  ':hover': {
+    color: '#ffffff',
+    background: '#4a90e2',
+  },
+});
+
+export const fillProjectsContainer = style({
+  width: '100%',
+  height: 'max-content',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 50,
+});
+
+export const imgsContainer = style({
+  position: 'relative',
+  width: '150%',
+  display: 'flex',
+  gap: 48,
+  margin: '42px 0',
+});
+
+export const projectsImgs = style({
+  border: '1px solid #E3E6E8',
+  borderRadius: 8,
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  objectFit: 'contain',
+});
+
+export const linkBox = style({
+  width: 'fit-content',
+  marginTop: 24,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+  borderRadius: 8,
+  border: '1px solid #d1d9e6',
+  padding: '10px 14px',
 });

@@ -48,4 +48,5 @@ export const closeBtn = style({
   borderRadius: '50%',
   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
   backdropFilter: 'blur(5px)',
+  zIndex: 150,
 });
