@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 const pretendard = localFont({
   src: '../fonts/PretendardVariable.ttf',
   display: 'swap',
+  weight: '45 920',
 });
 
 export const metadata: Metadata = {

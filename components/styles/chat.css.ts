@@ -399,7 +399,7 @@ export const customSvg = style({
 });
 
 export const fullScreenBtn = style({
-  width: '20%',
+  width: 'fit-content',
   height: 44,
   borderRadius: 8,
   marginLeft: 'auto',
