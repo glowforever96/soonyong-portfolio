@@ -185,24 +185,29 @@ export const imgFullContainer = style({
   position: 'fixed',
   top: 0,
   left: 0,
-  backgroundColor: '#fff',
+  backgroundColor: 'rgba(0, 0, 0, 0.8)',
   zIndex: 9999,
   display: 'flex',
   flexDirection: 'column',
 });
 
 export const closeBtn = style({
-  width: 65,
-  height: 65,
+  position: 'absolute',
+  top: 12,
+  right: 12,
+  width: 52,
+  height: 52,
   borderRadius: 12,
-  backgroundColor: 'transparent',
   cursor: 'pointer',
-  border: '2px solid black',
-  background: 'rgba(255, 255, 255, 0.9)',
+  border: 'none',
   marginLeft: 'auto',
   marginTop: 4,
   marginRight: 24,
   marginBottom: 12,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: 2,
 });
 
 export const svgIcon = style({
