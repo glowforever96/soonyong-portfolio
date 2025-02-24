@@ -21,4 +21,5 @@ export const feedbackBtn = style({
   justifyContent: 'center',
   border: 'none',
   background: 'transparent',
+  cursor: 'pointer',
 });
