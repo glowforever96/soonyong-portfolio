@@ -19,7 +19,7 @@ export default function EduCareerBubble() {
           <h2>👨‍💻 Career</h2>
           <ul>
             <li className={styles.liTag}>
-              티맥스에이아이 연구본부 Frontend 개발 (2022.10 ~ 2024.10)
+              티맥스에이아이 연구본부 Frontend 개발 (2022.10 ~ 2024.11)
             </li>
           </ul>
           <h3>주요 업무</h3>

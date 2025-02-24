@@ -1,4 +1,10 @@
 import * as styles from './styles/chat.css';
+
+import Project0img_1 from '../public/images/project/x/project0_img.png';
+import Project0img_2 from '../public/images/project/x/project0_img2.png';
+import Project0img_3 from '../public/images/project/x/project0_img3.png';
+import Project0img_4 from '../public/images/project/x/project0_img4.png';
+
 import Project1Img_1 from '../public/images/project/chatbot/1.png';
 import Project1Img_2 from '../public/images/project/chatbot/2.png';
 import Project1Img_3 from '../public/images/project/chatbot/3.png';
@@ -174,6 +180,31 @@ export const PROJECT_DATA: {
   about: string[];
   skillset: string[];
 }[] = [
+  {
+    title: 'X clone project',
+    link: '',
+    github: 'https://github.com/boyfromthewell/x_com_clone',
+    date: '2024.12 ~ 2025.02',
+    img: [Project0img_1, Project0img_2, Project0img_3, Project0img_4],
+    about: [
+      '- X (구 트위터) 클론 프로젝트 입니다.',
+      '- Next.js 15 (app router) 버전을 사용해 제작 했습니다.',
+      '- MSW로 API 테스트 환경 구축을 경험 해봤습니다.',
+      '- tanstack query 사용으로 서버 상태를 관리, 데이터를 페칭합니다.',
+      '- Web socket을 활용해 채팅 기능을 구현 했습니다.',
+    ],
+    skillset: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'vanilla-extract',
+      'tanstack/react-query',
+      'next-auth',
+      'socket.io',
+      'zustand',
+      'MSW',
+    ],
+  },
   {
     title: 'Portfolio Site',
     link: 'https://soonyong-portfolio.vercel.app/',
