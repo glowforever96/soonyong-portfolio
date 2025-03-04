@@ -146,6 +146,6 @@ export const toast = style({
   zIndex: 1000,
   fontSize: '1.15rem',
   opacity: 1,
-  transition: 'opacity 0.3s ease-out',
-  animation: `${toastIn} 0.5s ease-out, ${toastOut} 0.5s ease-in 2.5s`,
+  transition: 'opacity 0.35s ease-out',
+  animation: `${toastIn} 0.5s ease-out, ${toastOut} 0.5s ease-in 3.5s`,
 });

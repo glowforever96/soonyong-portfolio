@@ -14,14 +14,15 @@ export default function Header() {
 
   return (
     <>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <button
+          title="피드백"
           className={styles.feedbackBtn}
           onClick={() => setOpenFeedback(true)}
         >
           <FeedbackIcon />
         </button>
-      </div>
+      </header>
       {openFeedback && <FeedbackPopup onClose={closePopup} />}
       {message && <Toast message={message} onClose={removeToast} />}
     </>

@@ -8,7 +8,7 @@ interface ToastProps {
 
 export default function Toast({
   message,
-  duration = 2500,
+  duration = 3500,
   onClose,
 }: ToastProps) {
   useEffect(() => {

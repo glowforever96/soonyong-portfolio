@@ -74,7 +74,7 @@ export default function ContentsSection() {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       {chats.map(({ role, type, message, timestamp }, idx) =>
         role === 'server' ? (
           <ServerChat
@@ -96,6 +96,6 @@ export default function ContentsSection() {
         <SelectChips getAnswer={getAnswer} isInit={chats.length === 1} />
       )}
       <div ref={bottomRef} />
-    </div>
+    </section>
   );
 }

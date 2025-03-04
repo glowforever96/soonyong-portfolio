@@ -21,11 +21,15 @@ export default function FeedbackPopup({ onClose }: { onClose: () => void }) {
       text: textValue,
       createdAt: new Date().toLocaleString(),
     });
-    if (isSucess) {
+    if (!isSucess) {
       setIsLoading(false);
-      showToast('소중한 의견 감사합니다😝');
+      showToast('서버에 문제가 발생했어요😓');
       onClose();
+      return;
     }
+    setIsLoading(false);
+    showToast('소중한 의견 감사합니다😝');
+    onClose();
   };
 
   return (

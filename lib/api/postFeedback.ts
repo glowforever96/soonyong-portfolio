@@ -18,5 +18,8 @@ export async function postFeedback(payload: FeedbackParam) {
       createdAt,
     }),
   });
+  if (!res.ok) {
+    return false;
+  }
   if (res.status === 200) return true;
 }
