@@ -31,7 +31,7 @@ export default function ContactBubble() {
           <h3>Channels</h3>
           <p className={styles.contactParagraph}>
             <Link
-              href="https://github.com/boyfromthewell"
+              href="https://github.com/glowforever96"
               className={styles.aTag}
               target="_blank"
             >
