@@ -1,5 +1,5 @@
-import * as styles from './styles/chat.css';
-import WorksContent from './WorksContent';
+import * as styles from '@/styles/chat.css';
+import WorksContent from '../chat/WorksContent';
 
 export default function WorksFillScreen() {
   return (

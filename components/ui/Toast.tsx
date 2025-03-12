@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import * as styles from './styles/feedback.css';
+import * as styles from '@/styles/feedback.css';
+
 interface ToastProps {
   message: string;
   duration?: number;

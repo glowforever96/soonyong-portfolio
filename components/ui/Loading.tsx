@@ -1,4 +1,4 @@
-import * as styles from './styles/contentsSection.css';
+import * as styles from '@/styles/contentsSection.css';
 
 export default function Loading() {
   return (

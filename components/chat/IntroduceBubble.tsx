@@ -1,4 +1,4 @@
-import * as styles from './styles/chat.css';
+import * as styles from '@/styles/chat.css';
 
 export default function IntroduceBubble() {
   return (

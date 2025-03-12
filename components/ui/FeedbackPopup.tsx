@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import * as styles from './styles/feedback.css';
-import { useToastStore } from '../store/toast';
-import { postFeedback } from '../lib/api/postFeedback';
+import * as styles from '@/styles/feedback.css';
+import { useToastStore } from '@/store/toast';
+import { postFeedback } from '@/lib/api/postFeedback';
 import { ClipLoader } from 'react-spinners';
 
 export default function FeedbackPopup({ onClose }: { onClose: () => void }) {

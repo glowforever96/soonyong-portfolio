@@ -1,11 +1,11 @@
 import Image, { StaticImageData } from 'next/image';
-import * as styles from './styles/chat.css';
-import ScrollXslider from './ScrollXslider';
+import * as styles from '../../styles/chat.css';
+import ScrollXslider from '../ui//ScrollXslider';
 import Link from 'next/link';
-import GitLogo from '../public/github.svg';
+import GitLogo from '../../public/github.svg';
 import { useState } from 'react';
-import ImgFullScreen from './ImgFullScreen';
-import Modal from './Modal';
+import ImgFullScreen from '../fill-contents/ImgFullScreen';
+import Modal from '../ui/Modal';
 
 type Props = {
   title: string;

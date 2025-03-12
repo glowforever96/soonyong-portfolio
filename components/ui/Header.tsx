@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import FeedbackIcon from '../public/feedback.svg';
-import * as styles from './styles/header.css';
-import FeedbackPopup from './FeedbackPopup';
-import { useToastStore } from '../store/toast';
-import Toast from './Toast';
+import FeedbackIcon from '../../public/feedback.svg';
+import * as styles from '@/styles/header.css';
+import FeedbackPopup from '..//ui/FeedbackPopup';
+import { useToastStore } from '@/store/toast';
+import Toast from '../ui/Toast';
 
 export default function Header() {
   const [openFeedback, setOpenFeedback] = useState(false);

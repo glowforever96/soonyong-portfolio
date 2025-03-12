@@ -1,53 +1,53 @@
-import * as styles from './styles/chat.css';
+import * as styles from '@/styles/chat.css';
 
-import Project0img_1 from '../public/images/project/x/project0_img.png';
-import Project0img_2 from '../public/images/project/x/project0_img2.png';
-import Project0img_3 from '../public/images/project/x/project0_img3.png';
-import Project0img_4 from '../public/images/project/x/project0_img4.png';
+import Project0img_1 from '../../public/images/project/x/project0_img.png';
+import Project0img_2 from '../../public/images/project/x/project0_img2.png';
+import Project0img_3 from '../../public/images/project/x/project0_img3.png';
+import Project0img_4 from '../../public/images/project/x/project0_img4.png';
 
-import Project1Img_1 from '../public/images/project/chatbot/1.png';
-import Project1Img_2 from '../public/images/project/chatbot/2.png';
-import Project1Img_3 from '../public/images/project/chatbot/3.png';
-import Project1Img_4 from '../public/images/project/chatbot/4.png';
-import Project1Img_5 from '../public/images/project/chatbot/5.png';
+import Project1Img_1 from '../../public/images/project/chatbot/1.png';
+import Project1Img_2 from '../../public/images/project/chatbot/2.png';
+import Project1Img_3 from '../../public/images/project/chatbot/3.png';
+import Project1Img_4 from '../../public/images/project/chatbot/4.png';
+import Project1Img_5 from '../../public/images/project/chatbot/5.png';
 
-import Project2Img_1 from '../public/images/project/nextjsplayground/1.png';
-import Project2Img_2 from '../public/images/project/nextjsplayground/2.png';
-import Project2Img_3 from '../public/images/project/nextjsplayground/3.png';
-import Project2Img_4 from '../public/images/project/nextjsplayground/4.png';
-import Project2Img_5 from '../public/images/project/nextjsplayground/5.png';
+import Project2Img_1 from '../../public/images/project/nextjsplayground/1.png';
+import Project2Img_2 from '../../public/images/project/nextjsplayground/2.png';
+import Project2Img_3 from '../../public/images/project/nextjsplayground/3.png';
+import Project2Img_4 from '../../public/images/project/nextjsplayground/4.png';
+import Project2Img_5 from '../../public/images/project/nextjsplayground/5.png';
 
-import Project3Img_1 from '../public/images/project/weddingcard/1.png';
-import Project3Img_2 from '../public/images/project/weddingcard/2.png';
-import Project3Img_3 from '../public/images/project/weddingcard/3.png';
-import Project3Img_4 from '../public/images/project/weddingcard/4.png';
-import Project3Img_5 from '../public/images/project/weddingcard/5.png';
+import Project3Img_1 from '../../public/images/project/weddingcard/1.png';
+import Project3Img_2 from '../../public/images/project/weddingcard/2.png';
+import Project3Img_3 from '../../public/images/project/weddingcard/3.png';
+import Project3Img_4 from '../../public/images/project/weddingcard/4.png';
+import Project3Img_5 from '../../public/images/project/weddingcard/5.png';
 
-import Project4Img_1 from '../public/images/project/mapapp/1.png';
-import Project4Img_2 from '../public/images/project/mapapp/2.png';
-import Project4Img_3 from '../public/images/project/mapapp/3.png';
-import Project4Img_4 from '../public/images/project/mapapp/4.png';
-import Project4Img_5 from '../public/images/project/mapapp/5.png';
+import Project4Img_1 from '../../public/images/project/mapapp/1.png';
+import Project4Img_2 from '../../public/images/project/mapapp/2.png';
+import Project4Img_3 from '../../public/images/project/mapapp/3.png';
+import Project4Img_4 from '../../public/images/project/mapapp/4.png';
+import Project4Img_5 from '../../public/images/project/mapapp/5.png';
 
-import Project5Img_1 from '../public/images/project/boardme/1.png';
-import Project5Img_2 from '../public/images/project/boardme/2.png';
-import Project5Img_3 from '../public/images/project/boardme/3.png';
-import Project5Img_4 from '../public/images/project/boardme/4.png';
-import Project5Img_5 from '../public/images/project/boardme/5.png';
+import Project5Img_1 from '../../public/images/project/boardme/1.png';
+import Project5Img_2 from '../../public/images/project/boardme/2.png';
+import Project5Img_3 from '../../public/images/project/boardme/3.png';
+import Project5Img_4 from '../../public/images/project/boardme/4.png';
+import Project5Img_5 from '../../public/images/project/boardme/5.png';
 
-import Project6Img_1 from '../public/images/project/togethercoding/1.png';
-import Project6Img_2 from '../public/images/project/togethercoding/2.png';
-import Project6Img_3 from '../public/images/project/togethercoding/3.png';
-import Project6Img_4 from '../public/images/project/togethercoding/4.png';
-import Project6Img_5 from '../public/images/project/togethercoding/5.png';
+import Project6Img_1 from '../../public/images/project/togethercoding/1.png';
+import Project6Img_2 from '../../public/images/project/togethercoding/2.png';
+import Project6Img_3 from '../../public/images/project/togethercoding/3.png';
+import Project6Img_4 from '../../public/images/project/togethercoding/4.png';
+import Project6Img_5 from '../../public/images/project/togethercoding/5.png';
 
-import ImgSwiper from './ImgSwiper';
-import ScrollXslider from './ScrollXslider';
+import ImgSwiper from '../ui/ImgSwiper';
+import ScrollXslider from '../ui/ScrollXslider';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import Modal from './Modal';
-import ProjectsFillScreen from './ProjectsFillScreen';
-import FullScreenButton from './FullScreenButton';
+import Modal from '../ui/Modal';
+import ProjectsFillScreen from '../fill-contents/ProjectsFillScreen';
+import FullScreenButton from '../ui/FullScreenButton';
 
 export type ModalDataType = {
   imgList: StaticImageData[];

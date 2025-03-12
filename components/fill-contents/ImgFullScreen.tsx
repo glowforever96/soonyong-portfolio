@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
-import * as styles from './styles/contentsSection.css';
-import CloseIcon from '../public/close.svg';
+import * as styles from '@/styles/contentsSection.css';
+import CloseIcon from '../../public/close.svg';
 
 export default function ImgFullScreen({
   src,

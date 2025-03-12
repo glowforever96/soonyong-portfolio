@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import CloseIcon from '../public/close.svg';
+import CloseIcon from '../../public/close.svg';
 
-import * as styles from './styles/modal.css';
+import * as styles from '@/styles/modal.css';
+
 export default function Modal({
   children,
   onClose,

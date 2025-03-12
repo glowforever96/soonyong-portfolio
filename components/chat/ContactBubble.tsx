@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import * as styles from './styles/chat.css';
-import GitLogo from '../public/github.svg';
-import Velog from '../public/images/velog.png';
+import * as styles from '@/styles/chat.css';
+import GitLogo from '../../public/github.svg';
+import Velog from '../../public/images/velog.png';
 import Image from 'next/image';
 
 export default function ContactBubble() {

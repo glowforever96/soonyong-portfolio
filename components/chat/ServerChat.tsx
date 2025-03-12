@@ -1,12 +1,12 @@
 import EduCareerBubble from './EduCareerBubble';
 import InitBubble from './InitBubble';
 import IntroduceBubble from './IntroduceBubble';
-import * as styles from './styles/contentsSection.css';
+import * as styles from '@/styles/contentsSection.css';
 import SkillBubble from './SkillBubble';
 import ContactBubble from './ContactBubble';
 import WorksBubble from './WorksBubble';
 import ProjectsBubble from './ProjectsBubble';
-import { ServerChatType } from '../types/chat';
+import { ServerChatType } from '@/types/chat';
 
 interface ServerChatProps {
   type: ServerChatType;

@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import ClientChat from './ClientChat';
-import ServerChat from './ServerChat';
-import * as styles from './styles/contentsSection.css';
+import ClientChat from '../chat/ClientChat';
+import ServerChat from '../chat/ServerChat';
+import * as styles from '@/styles/contentsSection.css';
 import Loading from './Loading';
 import SelectChips from './SelectChips';
-import { ChatType, ServerChatType } from '../types/chat';
-import { extractTime } from '../lib/time';
-import { registerUser } from '../lib/api/registerUser';
+import { ChatType, ServerChatType } from '@/types/chat';
+import { extractTime } from '@/lib/time';
+import { registerUser } from '@/lib/api/registerUser';
 
 const INIT_CHAT: ChatType = {
   role: 'server',

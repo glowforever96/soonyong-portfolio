@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import * as styles from './styles/chat.css';
+import * as styles from '@/styles/chat.css';
 
 export default function WorksContent({ type }: { type: 'BUBBLE' | 'FILL' }) {
   return (

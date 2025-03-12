@@ -1,10 +1,10 @@
-import ScrollXslider from './ScrollXslider';
-import * as styles from './styles/chat.css';
+import ScrollXslider from '../ui/ScrollXslider';
+import * as styles from '@/styles/chat.css';
 import { useEffect, useState } from 'react';
-import Modal from './Modal';
-import WorksFillScreen from './WorksFillScreen';
+import Modal from '../ui/Modal';
+import WorksFillScreen from '../fill-contents/WorksFillScreen';
 import WorksContent from './WorksContent';
-import FullScreenButton from './FullScreenButton';
+import FullScreenButton from '../ui/FullScreenButton';
 
 export default function WorksBubble() {
   const [showBigView, setShowBigView] = useState(false);

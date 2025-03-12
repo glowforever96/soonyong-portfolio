@@ -26,9 +26,6 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
-  compiler: {
-    styledComponents: true,
-  },
 };
 
 export default withVanillaExtract(nextConfig);

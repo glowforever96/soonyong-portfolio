@@ -1,6 +1,6 @@
-import ContentsSection from '../components/ContentsSection';
-import Header from '../components/Header';
-import * as styles from '../styles/home/home.css';
+import ContentsSection from '@/components/ui/ContentsSection';
+import Header from '@/components/ui/Header';
+import * as styles from '../styles/home.css';
 
 export default function Home() {
   return (
