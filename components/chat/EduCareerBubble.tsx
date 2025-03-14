@@ -28,23 +28,18 @@ export default function EduCareerBubble() {
               - 사내 웹 서비스의 <b>프론트엔드 아키텍처 설계 및 구현</b>
             </li>
             <li className={styles.liTagNoStyle}>
-              - 서비스 전반에서 <b>재사용 가능한 UI 컴포넌트 개발 및 최적화</b>,
-              디자인 시스템 일관성 유지
+              - <b>재사용 가능한 UI 컴포넌트 개발</b> 및{' '}
+              <b>디자인 시스템의 일관성 유지</b>
+              <br />→ 유지보수성을 고려한 컴포넌트 설계 및 스타일 가이드 적용
             </li>
             <li className={styles.liTagNoStyle}>
-              - <b>React 프로젝트의 Typescript 마이그레이션</b>(jsx → tsx)
-              수행을 통해 코드 안정성과 유지 보수성 향상
+              - <b>React 프로젝트의 TypeScript 마이그레이션 (JSX → TSX)</b>
+              <br />→ 코드 안정성과 유지보수성을 향상하여 타입 안전성 확보
             </li>
             <li className={styles.liTagNoStyle}>
-              - <b>REST API 통신 관리 및 비동기 데이터 처리</b> 최적화
-            </li>
-            <li className={styles.liTagNoStyle}>
-              - <b>레거시 코드 리팩토링 및 성능 최적화</b>, 기존 비즈니스 로직
-              유지와 개선을 위한 주기적인 코드 리뷰
-            </li>
-            <li className={styles.liTagNoStyle}>
-              - <b>Docker를 활용한 개발 환경 구성 및</b> 컨테이너화된
-              애플리케이션을 통해 일관된 개발 및 배포 환경 제공
+              - <b>Docker 기반의 테스트 환경 구축</b>
+              <br />→{' '}
+              <b>백엔드 API를 쉽게 테스트할 수 있도록 컨테이너 환경 제공</b>
             </li>
           </ul>
         </div>
