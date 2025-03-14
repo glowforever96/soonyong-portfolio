@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ClientChat from '../chat/ClientChat';
 import ServerChat from '../chat/ServerChat';
 import * as styles from '@/styles/contentsSection.css';
@@ -50,10 +50,10 @@ export default function ContentsSection() {
         },
       ]);
       setIsLoading(false);
-    }, 800);
+    }, 500);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (bottomRef.current)
       bottomRef.current.scrollIntoView({
         behavior: 'smooth',

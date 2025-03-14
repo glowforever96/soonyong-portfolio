@@ -6,6 +6,7 @@ import GitLogo from '../../public/github.svg';
 import { useState } from 'react';
 import ImgFullScreen from '../fill-contents/ImgFullScreen';
 import Modal from '../ui/Modal';
+import usePopup from '@/hooks/usePopup';
 
 type Props = {
   title: string;
@@ -18,7 +19,7 @@ type Props = {
 };
 
 export default function ProjectFillContents({ data }: { data: Props[] }) {
-  const [showImgBig, setShowImgBig] = useState(false);
+  const { isPopupOpen, openPopup, closePopup } = usePopup();
   const [imgSrc, setImgSrc] = useState<StaticImageData>();
 
   return (
@@ -46,7 +47,7 @@ export default function ProjectFillContents({ data }: { data: Props[] }) {
                     className={styles.projectsImgs}
                     onClick={() => {
                       setImgSrc(src);
-                      setShowImgBig(true);
+                      openPopup();
                     }}
                   />
                 ))}
@@ -78,9 +79,9 @@ export default function ProjectFillContents({ data }: { data: Props[] }) {
           </div>
         ))}
       </div>
-      {showImgBig && (
+      {isPopupOpen && (
         <Modal type="IMG">
-          <ImgFullScreen src={imgSrc!} onClose={() => setShowImgBig(false)} />
+          <ImgFullScreen src={imgSrc!} onClose={closePopup} />
         </Modal>
       )}
     </>

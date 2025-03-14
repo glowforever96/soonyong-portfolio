@@ -6,11 +6,11 @@ import * as styles from '@/styles/header.css';
 import FeedbackPopup from '..//ui/FeedbackPopup';
 import { useToastStore } from '@/store/toast';
 import Toast from '../ui/Toast';
+import usePopup from '@/hooks/usePopup';
 
 export default function Header() {
-  const [openFeedback, setOpenFeedback] = useState(false);
+  const { isPopupOpen, openPopup, closePopup } = usePopup();
   const { message, removeToast } = useToastStore();
-  const closePopup = () => setOpenFeedback(false);
 
   return (
     <>
@@ -18,12 +18,12 @@ export default function Header() {
         <button
           title="피드백"
           className={styles.feedbackBtn}
-          onClick={() => setOpenFeedback(true)}
+          onClick={openPopup}
         >
           <FeedbackIcon />
         </button>
       </header>
-      {openFeedback && <FeedbackPopup onClose={closePopup} />}
+      {isPopupOpen && <FeedbackPopup onClose={closePopup} />}
       {message && <Toast message={message} onClose={removeToast} />}
     </>
   );

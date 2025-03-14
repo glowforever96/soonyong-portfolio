@@ -1,46 +1,4 @@
 import * as styles from '@/styles/chat.css';
-
-import Project0img_1 from '../../public/images/project/x/project0_img.png';
-import Project0img_2 from '../../public/images/project/x/project0_img2.png';
-import Project0img_3 from '../../public/images/project/x/project0_img3.png';
-import Project0img_4 from '../../public/images/project/x/project0_img4.png';
-
-import Project1Img_1 from '../../public/images/project/chatbot/1.png';
-import Project1Img_2 from '../../public/images/project/chatbot/2.png';
-import Project1Img_3 from '../../public/images/project/chatbot/3.png';
-import Project1Img_4 from '../../public/images/project/chatbot/4.png';
-import Project1Img_5 from '../../public/images/project/chatbot/5.png';
-
-import Project2Img_1 from '../../public/images/project/nextjsplayground/1.png';
-import Project2Img_2 from '../../public/images/project/nextjsplayground/2.png';
-import Project2Img_3 from '../../public/images/project/nextjsplayground/3.png';
-import Project2Img_4 from '../../public/images/project/nextjsplayground/4.png';
-import Project2Img_5 from '../../public/images/project/nextjsplayground/5.png';
-
-import Project3Img_1 from '../../public/images/project/weddingcard/1.png';
-import Project3Img_2 from '../../public/images/project/weddingcard/2.png';
-import Project3Img_3 from '../../public/images/project/weddingcard/3.png';
-import Project3Img_4 from '../../public/images/project/weddingcard/4.png';
-import Project3Img_5 from '../../public/images/project/weddingcard/5.png';
-
-import Project4Img_1 from '../../public/images/project/mapapp/1.png';
-import Project4Img_2 from '../../public/images/project/mapapp/2.png';
-import Project4Img_3 from '../../public/images/project/mapapp/3.png';
-import Project4Img_4 from '../../public/images/project/mapapp/4.png';
-import Project4Img_5 from '../../public/images/project/mapapp/5.png';
-
-import Project5Img_1 from '../../public/images/project/boardme/1.png';
-import Project5Img_2 from '../../public/images/project/boardme/2.png';
-import Project5Img_3 from '../../public/images/project/boardme/3.png';
-import Project5Img_4 from '../../public/images/project/boardme/4.png';
-import Project5Img_5 from '../../public/images/project/boardme/5.png';
-
-import Project6Img_1 from '../../public/images/project/togethercoding/1.png';
-import Project6Img_2 from '../../public/images/project/togethercoding/2.png';
-import Project6Img_3 from '../../public/images/project/togethercoding/3.png';
-import Project6Img_4 from '../../public/images/project/togethercoding/4.png';
-import Project6Img_5 from '../../public/images/project/togethercoding/5.png';
-
 import ImgSwiper from '../ui/ImgSwiper';
 import ScrollXslider from '../ui/ScrollXslider';
 import Image, { StaticImageData } from 'next/image';
@@ -48,6 +6,8 @@ import { useEffect, useRef, useState } from 'react';
 import Modal from '../ui/Modal';
 import ProjectsFillScreen from '../fill-contents/ProjectsFillScreen';
 import FullScreenButton from '../ui/FullScreenButton';
+import { PROJECT_DATA } from '@/constants';
+import usePopup from '@/hooks/usePopup';
 
 export type ModalDataType = {
   imgList: StaticImageData[];
@@ -59,7 +19,7 @@ export type ModalDataType = {
 export default function ProjectBubble() {
   const bubbleRef = useRef<HTMLDivElement>(null);
   const [boxWidth, setBoxWidth] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const { isPopupOpen, openPopup, closePopup: onClose } = usePopup();
   const [modalData, setModalData] = useState<ModalDataType>({
     imgList: [],
     aboutList: [],
@@ -75,7 +35,7 @@ export default function ProjectBubble() {
     link,
     github,
   }: ModalDataType) => {
-    setIsOpen(true);
+    openPopup();
     setModalData({
       imgList,
       aboutList,
@@ -85,7 +45,7 @@ export default function ProjectBubble() {
   };
 
   const closePopup = () => {
-    setIsOpen(false);
+    onClose();
     setModalData({
       imgList: [],
       aboutList: [],
@@ -160,7 +120,7 @@ export default function ProjectBubble() {
           )}
         </div>
       </ScrollXslider>
-      {isOpen && <ImgSwiper modalData={modalData} onClose={closePopup} />}
+      {isPopupOpen && <ImgSwiper modalData={modalData} onClose={closePopup} />}
       {showBigView && (
         <Modal onClose={() => setShowBigView(false)} type="GEN">
           <ProjectsFillScreen />
@@ -170,211 +130,3 @@ export default function ProjectBubble() {
     </div>
   );
 }
-
-export const PROJECT_DATA: {
-  title: string;
-  link: string;
-  github: string;
-  date: string;
-  img: StaticImageData[];
-  about: string[];
-  skillset: string[];
-}[] = [
-  {
-    title: 'X clone project',
-    link: '',
-    github: 'https://github.com/boyfromthewell/x_com_clone',
-    date: '2024.12 ~ 2025.02',
-    img: [Project0img_1, Project0img_2, Project0img_3, Project0img_4],
-    about: [
-      '- X (구 트위터) 클론 프로젝트 입니다.',
-      '- Next.js 15 (app router) 버전을 사용해 제작 했습니다.',
-      '- MSW로 API 테스트 환경 구축을 경험 해봤습니다.',
-      '- tanstack query 사용으로 서버 상태를 관리, 데이터를 페칭합니다.',
-      '- Web socket을 활용해 채팅 기능을 구현 했습니다.',
-    ],
-    skillset: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'vanilla-extract',
-      'tanstack/react-query',
-      'next-auth',
-      'socket.io',
-      'zustand',
-      'MSW',
-    ],
-  },
-  {
-    title: 'Portfolio Site',
-    link: 'https://soonyong-portfolio.vercel.app/',
-    github: 'https://github.com/boyfromthewell/soonyong-portfolio',
-    date: '2024.11',
-    img: [
-      Project1Img_1,
-      Project1Img_2,
-      Project1Img_3,
-      Project1Img_4,
-      Project1Img_5,
-    ],
-    about: [
-      '- 저의 포트폴리오용 웹사이트 입니다.',
-      '- 정적인 포트폴리오 사이트 대신 조금 더 흥미로운 형식이 없을까 고민했고 챗봇 형식으로 제작 해보게 되었습니다.',
-      '- 챗봇 인터페이스를 통해 방문하시는 분들이 자연스럽게 저의 경력, 프로젝트, 기술 스택 등을 보실 수 있도록 설계했습니다.',
-      '- Next.js, Vanilla Extract 등 최신 기술 스택을 활용하여 사용자 경험과 성능을 최적화했습니다.',
-      '- 다양한 화면에서도 최적화된 UI를 제공하기 위해 반응형 디자인에 신경 썼습니다.',
-      '- 특히 Vanilla Extract를 사용해보면서 TypeScript 기반이기 때문에 타입 안정성과 자동 완성 기능을 제공함으로 개발 생산성이 높아짐을 느꼈습니다.',
-    ],
-    skillset: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'vanilla-extract',
-      'swiper',
-      'prisma',
-    ],
-  },
-  {
-    title: 'Next.js Playground',
-    link: 'https://nextjspg.vercel.app/',
-    github: 'https://github.com/boyfromthewell/nextjs-playground',
-    date: '2024.08 ~',
-    img: [
-      Project2Img_1,
-      Project2Img_2,
-      Project2Img_3,
-      Project2Img_4,
-      Project2Img_5,
-    ],
-    about: [
-      '- Next.js ver14(app router)에 적응해 보기 위해 시작했습니다.',
-      '- 이름 그대로 만들어 보고 싶은 기능이 있으면 마음껏 만들고 있습니다.',
-      '- Youtube Data API 사용해 국가별 인기 동영상 및 동영상 데이터 조회/시청이 가능합니다.',
-      '- Youtube 개인 채널의 재생 목록 및 재생 목록안의 동영상 데이터를 조회/시청이 가능 합니다',
-      '- Tanstack Query 적용으로 서버 데이터 prefetch 및 optimistic update 기법을 사용해 사용자 경험 최적화 향상에 신경 썼습니다.',
-      '- Tanstack Query가 제공하는 hook인 useInfiniteQuery로 무한 스크롤 방식으로 데이터를 불러 옵니다.',
-      '- 컴포넌트를 공용화 하여 유튜버의 채널 ID만 알게 되면 무한으로 재생 목록을 조회/시청 가능한 기능 구현이 가능합니다.',
-      '- next-auth 사용으로 credential, OAuth 유저 인증 과정을 구현 했습니다.',
-      '- Prisma, Supabase 사용으로 유저 정보, 댓글 정보 등을 저장, 관리 / API 연동 기능을 구현 했습니다.',
-      '- media query 사용으로 반응형 UI 구현에 신경 썼습니다.',
-    ],
-    skillset: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'styled-components',
-      'next-auth',
-      'prisma',
-      'supabse',
-      'Youtube Data API',
-    ],
-  },
-  {
-    title: 'Mobile Wedding Card',
-    link: 'https://sy-mobile-wedding-card.vercel.app/',
-    github: 'https://github.com/boyfromthewell/mobile-wedding-card',
-    date: '2024.06',
-    img: [
-      Project3Img_1,
-      Project3Img_2,
-      Project3Img_3,
-      Project3Img_4,
-      Project3Img_5,
-    ],
-    about: [
-      '- 본인의 결혼을 기념해 만든 추억 저장용 모바일 청첩장 입니다.',
-      '- velog 인기 게시물이었던 모바일 청첩장 제작기를 우연히 보고 영감을 받아 제작하였습니다.',
-      '- 정적 고화질 이미지가 많은 프로젝트인만큼 이미지 최적화에 신경 썼습니다.',
-      '- 간단한 Firebase 연동으로 방명록, 문의 기능을 제공합니다.',
-      '- framer-motion 라이브러리를 사용해 애니메이션을 구현 했습니다.',
-      '- 데스크탑 / 모바일 버전을 지원합니다.',
-    ],
-    skillset: [
-      'React',
-      'TypeScript',
-      'styled-component',
-      'swiper',
-      'framer-motion',
-      'Firebase',
-      'Naver Map API',
-    ],
-  },
-  {
-    title: 'Map Application',
-    link: 'https://map-application-mocha.vercel.app/',
-    github: 'https://github.com/boyfromthewell/map-application',
-    date: '2023.08 ~ 2023.11',
-    img: [
-      Project4Img_1,
-      Project4Img_2,
-      Project4Img_3,
-      Project4Img_4,
-      Project4Img_5,
-    ],
-    about: [
-      '- Next.js ver13 (page router)을 사용해 제작한 간단한 지도 어플리케이션입니다.',
-      '- getStaticProps, getServerSideProps 등의 메서드 활용을 통해 정적 페이지 생성, SSR에 대해 이해 할수 있었습니다.',
-      '- 다크모드, 피드백, 매장 리뷰 작성 기능을 제공합니다.',
-      '- 리뷰 작성 기능은 네이버 지도 앱 UI와 비슷한 형태로 만들어 봤습니다.',
-      '- Firebase 연동으로 리뷰, 피드백 데이터를 관리 합니다.',
-      '- 데스크탑 / 모바일 버전을 지원합니다.',
-    ],
-    skillset: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'css-module',
-      'SWR',
-      'Firebase',
-      'Naver Map API',
-    ],
-  },
-  {
-    title: 'Board-Me',
-    link: 'https://board-we.github.io/frontend/',
-    github: 'https://github.com/Board-We/frontend',
-    date: '2022.12 ~ 2023.03',
-    img: [
-      Project5Img_1,
-      Project5Img_2,
-      Project5Img_3,
-      Project5Img_4,
-      Project5Img_5,
-    ],
-    about: [
-      '- 백엔드, 디자인 담당 구성원과 협업해 진행한 프로젝트 입니다.',
-      '- 나만의 커스텀 롤링 페이퍼를 만들 수 있는 서비스를 기획/제작 했습니다.',
-      '- 주기적으로 회의를 통해 협업을 진행 했으며 실제 서비스가 프로덕션 되는 과정을 몸소 느낄 수 있었습니다.',
-      '- Frontend 구성원과 같이 의견을 조율해 효율적인 개발 방식을 찾아 배울 수 있었습니다.',
-    ],
-    skillset: ['React', 'JavaScript', 'styled-component', 'axios', 'recoil'],
-  },
-  {
-    title: 'Together Coding',
-    link: '',
-    github: 'https://github.com/Together-Coding/Client',
-    date: '2022.03 ~ 2022.06',
-    img: [
-      Project6Img_1,
-      Project6Img_2,
-      Project6Img_3,
-      Project6Img_4,
-      Project6Img_5,
-    ],
-    about: [
-      '- 학부 졸업 작품으로 진행한 <일대다 코딩 수업을 위한 실시칸 코드 공유 서비스> 프로젝트 입니다.',
-      '- 유저 인증, 수업 생성 및 관리, 웹 코드 에디터 제공 및 코드 컴파일 기능을 제공합니다.',
-      '- WebSocket을 활용해 파일 변경 사항과 커서 위치를 실시간으로 공유하도록 구현 했습니다.',
-      '- 개발 당시에는 미숙하고 어려움이 많았지만 돌이켜 보면 Frontend 관련 지식과 기술들을 전반적으로 학습할 수 있었던 좋은 경험이었습니다.',
-      '- API 스펙을 토의하고, 데이터 구조 및 통신 방식을 조율해 클라이언트-서버 간 상호작용을 구현하는 방법을 익힐 수 있었습니다.',
-    ],
-    skillset: [
-      'React',
-      'JavaScript',
-      'Sass',
-      'axios',
-      'Monaco Editor',
-      'socket-io',
-    ],
-  },
-];

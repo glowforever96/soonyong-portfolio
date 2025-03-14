@@ -1,17 +1,20 @@
 import ScrollXslider from '../ui/ScrollXslider';
 import * as styles from '@/styles/chat.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Modal from '../ui/Modal';
 import WorksFillScreen from '../fill-contents/WorksFillScreen';
 import WorksContent from './WorksContent';
 import FullScreenButton from '../ui/FullScreenButton';
+import usePopup from '@/hooks/usePopup';
+import Image from 'next/image';
+import Logo from '../../public/images/tlogo.png';
 
 export default function WorksBubble() {
-  const [showBigView, setShowBigView] = useState(false);
+  const { isPopupOpen, openPopup, closePopup } = usePopup();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowBigView(true);
+      openPopup();
     }, 800);
     return () => clearTimeout(timer);
   }, []);
@@ -22,14 +25,26 @@ export default function WorksBubble() {
         <div className={styles.title}>
           <h1 className={styles.h1Title}>Works</h1>
         </div>
-        <h3>티맥스에이아이 (2022. 10 ~ 2024. 10)</h3>
+        <h3
+          style={{
+            display: 'flex',
+            gap: 6,
+            alignItems: 'center',
+            marginBottom: 12,
+            fontSize: '1.625rem',
+            paddingBottom: 12,
+          }}
+        >
+          <Image src={Logo} alt="logo" width={25} height={25} priority />
+          티맥스에이아이 (2022. 10 ~ 2024. 10)
+        </h3>
         <ScrollXslider>
           <WorksContent type="BUBBLE" />
         </ScrollXslider>
-        <FullScreenButton onClick={() => setShowBigView(true)} />
+        <FullScreenButton onClick={openPopup} />
       </div>
-      {showBigView && (
-        <Modal onClose={() => setShowBigView(false)} type="GEN">
+      {isPopupOpen && (
+        <Modal onClose={closePopup} type="GEN">
           <WorksFillScreen />
         </Modal>
       )}
