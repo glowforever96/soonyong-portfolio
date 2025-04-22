@@ -25,21 +25,26 @@ export default function EduCareerBubble() {
           <h3>주요 업무</h3>
           <ul className={styles.ulContainer}>
             <li className={styles.liTagNoStyle}>
-              - 사내 웹 서비스의 <b>프론트엔드 아키텍처 설계 및 구현</b>
+              - 웹/앱 서비스의 프론트엔드 아키텍처 설계 및 기능 개발
             </li>
             <li className={styles.liTagNoStyle}>
-              - <b>재사용 가능한 UI 컴포넌트 개발</b> 및{' '}
-              <b>디자인 시스템의 일관성 유지</b>
-              <br />→ 유지보수성을 고려한 컴포넌트 설계 및 스타일 가이드 적용
+              - PC/모바일 웹 환경을 모두 고려한 UI/UX 최적화 및 웹 접근성 향상
+              경험
             </li>
             <li className={styles.liTagNoStyle}>
-              - <b>React 프로젝트의 TypeScript 마이그레이션 (JSX → TSX)</b>
-              <br />→ 코드 안정성과 유지보수성을 향상하여 타입 안전성 확보
+              - 다수의 재사용 가능한 UI 컴포넌트 및 공통 모듈 개발, 디자인
+              시스템 일관성 유지
             </li>
             <li className={styles.liTagNoStyle}>
-              - <b>Docker 기반의 테스트 환경 구축</b>
-              <br />→{' '}
-              <b>백엔드 API를 쉽게 테스트할 수 있도록 컨테이너 환경 제공</b>
+              - REST API 통신 리소스 관리 및 백엔드 개발자와의 협업을 통한 문제
+              해결
+            </li>
+            <li className={styles.liTagNoStyle}>
+              - 다양한 도메인의 프로젝트(AI 챗봇, 디지털 교과서, 사내 홈페이지
+              등) 경험 보유
+            </li>
+            <li className={styles.liTagNoStyle}>
+              - 기획, 디자인, 백엔드 직군과의 원활한 커뮤니케이션 역량 보유
             </li>
           </ul>
         </div>
